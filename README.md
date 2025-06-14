@@ -45,6 +45,13 @@
    git remote add origin https://github.com/你的用户名/你的仓库名.git
    
    # 推送到远程仓库
+   # 如果遇到 'src refspec main does not match any' 错误，请先检查分支名称
+   git branch
+   
+   # 如果显示为 'master' 分支，请重命名为 'main'
+   git branch -M main
+   
+   # 再次尝试推送
    git push -u origin main
    ```
 3. 如果是第一次使用Git，需要先配置用户名和邮箱：

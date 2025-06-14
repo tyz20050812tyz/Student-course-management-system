@@ -14,6 +14,7 @@
                 <li><a href="#home" class="nav-link active">首页</a></li>
                 <li><a href="#courses" class="nav-link">课程</a></li>
                 <li><a href="#grades" class="nav-link">成绩</a></li>
+                <li><a href="#tuition" class="nav-link">学费</a></li>
                 <li><a href="#profile" class="nav-link">个人信息</a></li>
             </ul>
             <div class="auth-buttons">
@@ -35,6 +36,30 @@
         </section>
 
         <section id="courses" class="page">
+
+    <!-- 成绩管理 -->
+    <section id="grades" class="page">
+      <div class="page-header">
+        <h2>成绩管理</h2>
+        <div class="search-bar">
+          <input type="text" id="grades-search" placeholder="搜索成绩...">
+          <button class="btn btn-secondary">搜索</button>
+        </div>
+      </div>
+      <div id="grades-content" class="grades-grid"></div>
+    </section>
+
+    <!-- 学费管理 -->
+    <section id="tuition" class="page">
+      <div class="page-header">
+        <h2>学费管理</h2>
+        <div class="search-bar">
+          <input type="text" id="tuition-search" placeholder="搜索学费...">
+          <button class="btn btn-secondary">搜索</button>
+        </div>
+      </div>
+      <div id="tuition-content" class="tuition-grid"></div>
+    </section>
             <div class="page-header">
                 <h2>课程列表</h2>
                 <div class="search-bar">
@@ -76,6 +101,26 @@
                 </div>
                 <button type="submit" class="btn btn-primary full-width">登录</button>
             </form>
+                </div>
+                <div class="tab-pane" id="register-pane">
+                    <h2>用户注册</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-username">用户名</label>
+                            <input type="text" id="register-username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">邮箱</label>
+                            <input type="email" id="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">密码</label>
+                            <input type="password" id="register-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">注册</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -86,5 +131,7 @@
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/courses.js"></script>
+    <script src="js/grades.js"></script>
+    <script src="js/tuition.js"></script>
 </body>
 </html>

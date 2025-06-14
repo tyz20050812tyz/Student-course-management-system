@@ -7,15 +7,16 @@
 }
 
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
     --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #34495e;
-    --success-color: #2ecc71;
+    --light-color: #f8f9fa;
+    --dark-color: #2c3e50;
+    --success-color: #27ae60;
     --warning-color: #f39c12;
-    --border-radius: 8px;
-    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
 }
 
 body {
@@ -136,6 +137,37 @@ nav {
 }
 
 /* 主内容区域样式 */
+
+/* 成绩管理和学费管理样式 */
+.grade-card, .tuition-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.grade-card:hover, .tuition-card:hover {
+    transform: translateY(-5px);
+}
+
+.grade-card h3, .tuition-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    flex-grow: 1;
+}
 main {
     padding: 40px 0;
 }
@@ -164,11 +196,39 @@ main {
 /* 首页样式 */
 .hero {
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+    padding: 120px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     border-radius: var(--border-radius);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyOTgwYjkiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRoLTJ2LTRoMnY0em0wLTZ2LTRoLTJ2NGgyem0tNiAwdjRIMjR2LTRoMnptNi02aC0ydjRoMnYtNHptLTYgMGgtMnY0aDJ2LTR6bTYgNmgtMnY0aDJ2LTR6bTAgNmgtMnY0aDJ2LTR6bTAgNmgtMnY0aDJ2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=');
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
