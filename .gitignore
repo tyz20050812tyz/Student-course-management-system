@@ -1,0 +1,64 @@
+# Java相关
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.ctxt
+.mtj.tmp/
+hs_err_pid*
+replay_pid*
+
+# Maven相关
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle相关
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Spring Boot相关
+spring-boot-starter/
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE相关
+.idea/
+.vscode/
+*.swp
+*.swo
+*~.nfs*
+.DS_Store
+Thumbs.db
+
+# 数据库相关
+*.sql
+*.sqlite
+
+# 日志相关
+logs/
+*.log
+
+# 缓存相关
+*.cache
+
+# 前端相关
+node_modules/
+dist/
+build/
+*.js.map
+*.css.map
+
+# 系统相关文件
+*.bak
+*.tmp
+*~

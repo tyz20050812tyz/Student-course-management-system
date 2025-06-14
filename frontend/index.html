@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生课程管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">课程管理系统</div>
+        <nav>
+            <ul id="main-nav">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#courses" class="nav-link">课程</a></li>
+                <li><a href="#grades" class="nav-link">成绩</a></li>
+                <li><a href="#profile" class="nav-link">个人信息</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">登录</button>
+                <button id="register-btn" class="btn btn-primary">注册</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>欢迎使用学生课程管理系统</h1>
+                <p>一站式管理您的课程、成绩和学习进度</p>
+                <div class="action-buttons">
+                    <button id="browse-courses-btn" class="btn btn-primary">浏览课程</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="page">
+            <div class="page-header">
+                <h2>课程列表</h2>
+                <div class="search-bar">
+                    <input type="text" id="course-search" placeholder="搜索课程...">
+                    <button class="btn btn-secondary">搜索</button>
+                </div>
+            </div>
+            <div id="course-list" class="course-grid">
+                <!-- 课程卡片将通过JavaScript动态加载 -->
+                <div class="course-card">
+                    <div class="course-code">CS101</div>
+                    <h3 class="course-title">计算机科学导论</h3>
+                    <p class="course-description">介绍计算机科学基础知识和编程概念</p>
+                    <div class="course-meta">
+                        <span class="credits">3学分</span>
+                        <span class="teacher">王教授</span>
+                    </div>
+                    <button class="btn btn-primary enroll-btn">注册课程</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 其他页面内容将通过JavaScript动态加载 -->
+    </main>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">用户名</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">登录</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 学生课程管理系统 - 大二小学期项目</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>
